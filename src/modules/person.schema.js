@@ -1,0 +1,21 @@
+'use strict';
+
+// const { DataTypes } = require("sequelize");
+
+module.exports = (sequelizeDatabase, DataTypes) => {
+  return sequelizeDatabase.define('people', {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    pronouns: {
+      type: DataTypes.ENUM,
+      values: ['they/them', 'she/her', 'he/him'],
+      allowNull: true,
+    },
+  });
+};
