@@ -17,7 +17,7 @@
 
 - [Deployed Site:](https://keelen-api-server-prod.herokuapp.com/)
 
-- [PR From Github:](https://github.com/Keelen-Fisher/api-server/pull/1)
+- [PR From Github:](https://github.com/Keelen-Fisher/api-server/pull/3)
 
 #### UML
 
