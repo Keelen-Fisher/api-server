@@ -36,11 +36,32 @@ class ModelInterface {
   }
 
   // Update
-  // async update(id = null)
+  async update(data, id) {
+    try{
+      await this.model.update(data, {where: { id }});
+      let record = await this.model.findOne({where: { id } });
+      return record;
+    }
+    catch(err){
+      console.error('Houston, we have a problem', err);
+      return err;
+    }
+  }
 
 
   // Delete
-  // async delete()
+  async delete(id){
+    try
+    {
+      await this.model.destroy({where: { id }});
+      return 'This is Deleted!';
+    }
+    catch(err) 
+    {
+      console.error('We have an error', err);
+      return err;
+    }
+  }
 
 
 }
